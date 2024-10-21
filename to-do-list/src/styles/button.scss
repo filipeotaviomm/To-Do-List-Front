@@ -1,0 +1,49 @@
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 400;
+
+    border-radius: 255px;
+
+    border: 1px solid;
+
+    transition: .4s;
+
+
+    &.sm{
+      padding: 0 24px;
+      height: 2.875rem;
+    }
+
+    &.md {
+      padding: 0 32px;
+      height: 3.1875rem;
+    }
+
+    &.solid{
+      color: var(--color-black);
+      border-color: var(--color-purple);
+      background: var(--color-purple2);  
+    }
+
+    :hover{
+        filter: brightness(0.9);
+    }
+
+    &.outline{
+      color: var(--color-black);
+
+      &:hover{
+        color: var(--color-white);
+        background: var(--color-black);
+        border-color: var(--color-black);
+      }
+    }
+}
+
+
