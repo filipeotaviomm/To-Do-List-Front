@@ -1,0 +1,43 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 5px;
+
+    .div-input {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      position: relative;
+      
+      & > input {
+        border: 2px solid var(--color-purple);
+        border-radius: 3px;
+        padding: 5px;
+        height: 45px;
+        width: 100%;
+      }
+      
+        .error {
+          display: flex;
+          margin-top: 5px;
+          color: red;
+      }
+    }
+  
+    & > button {
+      display: flex;
+      margin-top: 15px;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--color-purple);
+      border-radius: 5px;
+      padding: 10px;
+  
+      &:hover {
+        border: 2px solid var(--color-purple);
+        background-color: var(--color-purple2);
+      }
+    }
+  }

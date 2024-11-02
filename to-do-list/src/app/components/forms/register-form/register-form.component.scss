@@ -1,0 +1,68 @@
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 5px;
+
+    & > .inputs-group {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .div-input {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      position: relative;
+      width: 100%;
+      
+      & > input {
+        border: 2px solid var(--color-purple);
+        border-radius: 3px;
+        padding: 5px;
+        height: 45px;
+        width: 100%;
+      }
+      
+    }
+
+    & > .div-input-alone {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      position: relative;
+      width: 50%;
+
+      & > input {
+        border: 2px solid var(--color-purple);
+        border-radius: 3px;
+        padding: 5px;
+        height: 45px;
+        width: 100%;
+      }
+    }
+  
+    & > button {
+      display: flex;
+      margin-top: 15px;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--color-purple);
+      border-radius: 5px;
+      padding: 10px;
+  
+      &:hover {
+        border: 2px solid var(--color-purple);
+        background-color: var(--color-purple2);
+      }
+    }
+  }
+
+  .error {
+    display: flex;
+    margin-top: 5px;
+    color: red;
+}

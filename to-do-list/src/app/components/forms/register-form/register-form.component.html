@@ -1,0 +1,29 @@
+<form class="register-form" (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+    <div class="inputs-group">
+        <div class="div-input">
+            <label class="p2 lg" for="profileImageUrl">Photo Url</label>
+            <input id="profileImageUrl" type="text" placeholder="Photo url" formControlName="profileImageUrl" />
+        </div>
+        <div class="div-input">
+            <label class="p2 lg" for="name">Name</label>
+            <input id="name" type="text" placeholder="Name" formControlName="name" />
+        </div>
+    </div>
+    
+    <div class="inputs-group">
+        <div class="div-input">
+            <label class="p2 lg" for="email">Email</label>
+            <input id="email" type="email" placeholder="Email" formControlName="email" />
+        </div>
+        <div class="div-input">
+            <label class="p2 lg" for="username">Username</label>
+            <input id="username" type="text" placeholder="Username" formControlName="username" />
+        </div>
+    </div>
+    
+    <div class="div-input-alone">
+        <label class="p2 lg" for="password">Password</label>
+        <input id="password" type="password" placeholder="Password" formControlName="password"/>
+    </div>
+    <button class="p2 lg" type="submit">Sign up</button>
+</form>
