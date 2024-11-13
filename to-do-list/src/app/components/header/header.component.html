@@ -1,1 +1,14 @@
-<header></header>
+<header>
+    <div class="div-header">
+      <div>
+        <h1>Olá, {{userInfo?.name}}!!</h1>
+      </div>
+      <div class="user-box">
+        <img class="avatar" *ngIf="userInfo.profileImageUrl"  src="{{ userInfo.profileImageUrl }}" alt="user-photo" />
+        <div class="first-letter-name" *ngIf="!userInfo.profileImageUrl">
+            <p>{{userInfo.name?.charAt(0).toUpperCase()}}</p>
+        </div>
+        <button>v</button>
+      </div>
+    </div>
+  </header>
