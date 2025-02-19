@@ -11,11 +11,18 @@ import { ToastrService } from 'ngx-toastr';
   providedIn: 'root'
 })
 export class UserService {
-  readonly userSignal = signal<IUserResp | null>(null);
 
+  readonly userSignal = signal<IUserResp | null>(null);
   getUser() {
     return this.userSignal();
   }
+
+
+  readonly isUserMenuOpen = signal<boolean>(false);
+  setIsUserMenuOpen(value: boolean) {
+    this.isUserMenuOpen.set(value);
+  }
+
 
   constructor(private userRequest: UserRequest, private router: Router, private toastr: ToastrService) {
     //autologin
@@ -85,8 +92,9 @@ export class UserService {
 
 
   logout() {
+    this.router.navigateByUrl('/');
     this.userSignal.set(null);
     localStorage.removeItem('to-do-list:token');
-    this.router.navigateByUrl('/');
+    this.isUserMenuOpen.set(false);
   }
 }

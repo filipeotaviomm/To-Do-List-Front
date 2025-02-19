@@ -8,7 +8,12 @@
         <div class="first-letter-name" *ngIf="!userInfo.profileImageUrl">
             <p>{{userInfo.name?.charAt(0).toUpperCase()}}</p>
         </div>
-        <button>v</button>
+        <button (click)="OpenUserMenu()" aria-label="menu" title="Open menu">
+          <span class="drop-down material-symbols-outlined">
+            arrow_drop_down
+          </span>
+        </button>
+        <app-user-menu class="menu" *ngIf="isUserMenuOpen()"></app-user-menu>
       </div>
     </div>
   </header>
